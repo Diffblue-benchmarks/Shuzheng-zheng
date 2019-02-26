@@ -1,7 +1,5 @@
-# Tested on Deeptest release 1.10.0
 cbmcArguments:
   java-generate-no-comments: true
-  no-trival-tests: true
 phases:
 -
   timeout: 60
