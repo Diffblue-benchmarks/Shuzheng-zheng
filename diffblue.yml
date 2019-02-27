@@ -1,5 +1,11 @@
 cbmcArguments:
   java-generate-no-comments: true
+units:
+  - target:
+    - dir: zheng-common/target/classes
+      file: com/zheng/common/util/RequestUtil.class
+      sourceDir: zheng-common/src/main/java
+      sourceFile: com/zheng/common/util/RequestUtil.java
 phases:
 -
   timeout: 60
