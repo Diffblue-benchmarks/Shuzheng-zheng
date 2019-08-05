@@ -33,7 +33,7 @@ phases:
       # Instrument the file as opposed to the function only
       cover-only: file
       # Set string input value
-      string-input-value: ["foo", "Bar", "BAZ", "1234", "1a 2b 3c", "A1B2C3", "a,b,c", "1", "2", "3", "a/b/c", "a'b'c", ",", "/", "'"]
+      string-input-value: "foo"
       # Instantiate classes using the simplest constructor strategy
       smart-harness: simplest-constructor-and-nondet
   -
@@ -47,13 +47,13 @@ phases:
       # never initialize reference-typed parameter to the entry point with null
       java-assume-inputs-non-null: true
       # Maximum allowed length for an array passed as test input.
-      max-nondet-array-length: 10
+      max-nondet-array-length: 1000
       # Bound the length of input strings.
-      max-nondet-string-length: 10
+      max-nondet-string-length: 1000
       # Add constraint that strings are printable
-      string-printable: true
+      string-printable: false
       # Set string input value
-      string-input-value: ["foo", "Bar", "BAZ", "1234", "1a 2b 3c", "A1B2C3", "a,b,c", "1", "2", "3", "a/b/c", "a'b'c", ",", "/", "'"]
+      string-input-value: "foo"
       # Make implicit runtime exceptions explicit.
       throw-runtime-exceptions: false
       # Set an upper bound on loop unwinding.
@@ -83,7 +83,7 @@ phases:
       # Explores the program tree breadth-first.
       paths: fifo
       # Set string input value
-      string-input-value: ["foo", "Bar", "BAZ", "1234", "1a 2b 3c", "A1B2C3", "a,b,c", "1", "2", "3", "a/b/c", "a'b'c", ",", "/", "'"]
+      string-input-value: "foo"
       # Add constraint that strings are printable
       string-printable: true
       # Make implicit runtime exceptions explicit.
@@ -141,7 +141,7 @@ phases:
       # Set an upper bound on loop unwinding.
       unwind: 1
       # Set string input value
-      string-input-value: ["foo", "Bar", "BAZ", "1234", "1a 2b 3c", "A1B2C3", "a,b,c", "1", "2", "3", "a/b/c", "a'b'c", ",", "/", "'"]
+      string-input-value: "foo"
       # If the logs contain output of the following then proceed to phase X
     nextPhase:
       # If the function is not analysable then do not pass onto the next phase
